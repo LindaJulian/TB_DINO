@@ -1,0 +1,18 @@
+preprocess:
+  mode: whu
+  image_a_dir: data/raw/WHU-CD/A
+  image_b_dir: data/raw/WHU-CD/B
+  mask_dir: data/raw/WHU-CD/label
+  output_dir: data/prepared/whu_cd
+  patch_size: 256
+  stride: 256
+  bands: [1, 2, 3]
+  seed: 42
+  strict_pairing: true
+  timestamp_a: "2012"
+  timestamp_b: "2016"
+  split:
+    train: 0.6
+    val: 0.2
+    test: 0.2
+

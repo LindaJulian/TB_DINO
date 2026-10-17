@@ -1,0 +1,16 @@
+_base_: levir_cd.yaml
+
+inference:
+  mode: raster
+  device: auto
+  images:
+    - data/inference/t0.tif
+    - data/inference/t1.tif
+  timestamps: [t0, t1]
+  alpha_by_year: {}
+  output_dir: outputs/raster_inference
+  tile_size: 256
+  stride: 128
+  threshold: null
+  write_png: true
+

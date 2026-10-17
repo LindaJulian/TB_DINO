@@ -1,0 +1,21 @@
+_base_: base.yaml
+
+output_dir: outputs/dynamic_small
+data:
+  train_manifest: data/prepared/dynamic/train.jsonl
+  val_manifest: data/prepared/dynamic/val.jsonl
+  test_manifest: data/prepared/dynamic/test.jsonl
+  bands: [1, 2, 3, 4]
+  scale_divisor: 10000.0
+  mean: [0.2, 0.2, 0.2, 0.2]
+  std: [0.2, 0.2, 0.2, 0.2]
+  batch_size: 1
+
+model:
+  input_channels: 4
+  use_alphaearth: true
+  encoder_chunk_size: 2
+
+training:
+  gradient_accumulation: 8
+

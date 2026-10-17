@@ -1,0 +1,11 @@
+_base_: dynamic_small.yaml
+
+output_dir: outputs/dynamic_satellite_vitl
+model:
+  backbone: facebook/dinov3-vitl16-pretrain-sat493m
+  hidden_dim: 256
+  encoder_chunk_size: 1
+
+training:
+  gradient_accumulation: 16
+

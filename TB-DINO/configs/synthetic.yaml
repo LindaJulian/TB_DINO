@@ -1,0 +1,44 @@
+_base_: base.yaml
+
+output_dir: outputs/synthetic
+data:
+  train_manifest: data/synthetic/train.jsonl
+  val_manifest: data/synthetic/val.jsonl
+  test_manifest: data/synthetic/test.jsonl
+  batch_size: 2
+  eval_batch_size: 2
+  scale_divisor: 255.0
+  mean: [0.5, 0.5, 0.5]
+  std: [0.25, 0.25, 0.25]
+
+model:
+  fake_backbone: true
+  fake_dim: 32
+  input_channels: 3
+  patch_size: 16
+  hidden_dim: 32
+  use_lora: false
+  gradient_checkpointing: false
+  encoder_chunk_size: 0
+  use_alphaearth: true
+  sca:
+    max_samples: 64
+    hard_negatives: 32
+
+training:
+  device: cpu
+  epochs: 1
+  learning_rate: 0.001
+  gradient_accumulation: 1
+  amp: false
+
+evaluation:
+  device: cpu
+
+inference:
+  mode: manifest
+  device: cpu
+  output_dir: outputs/synthetic/predictions
+  tile_size: 64
+  stride: 32
+

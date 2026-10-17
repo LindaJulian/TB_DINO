@@ -1,0 +1,12 @@
+_base_: base.yaml
+
+output_dir: outputs/whu_cd
+data:
+  train_manifest: data/prepared/whu_cd/train.jsonl
+  val_manifest: data/prepared/whu_cd/val.jsonl
+  test_manifest: data/prepared/whu_cd/test.jsonl
+
+model:
+  input_channels: 3
+  use_alphaearth: false
+

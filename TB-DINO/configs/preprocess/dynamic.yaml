@@ -1,0 +1,15 @@
+preprocess:
+  mode: timeseries
+  sequences_file: data/raw/dynamic/sequences.jsonl
+  output_dir: data/prepared/dynamic
+  patch_size: 64
+  stride: 64
+  bands: [1, 2, 3, 4]
+  target_mode: cumulative_monthly
+  ignore_index: 255
+  seed: 42
+  split:
+    train: 0.6
+    val: 0.2
+    test: 0.2
+

@@ -1,0 +1,11 @@
+alphaearth_export:
+  project: your-google-cloud-project
+  aoi: data/aoi.geojson
+  years: [2018, 2019]
+  collection: GOOGLE/SATELLITE_EMBEDDING/V1/ANNUAL
+  destination: drive
+  drive_folder: TB_DINO_AlphaEarth
+  scale: 10
+  crs: null
+  max_pixels: 1000000000000
+  task_file: alphaearth_tasks.json

@@ -1,0 +1,7 @@
+alphaearth_align:
+  reference: data/raw/dynamic/site_01/2018_01.tif
+  inputs:
+    "2018": data/alphaearth/alphaearth_2018.tif
+    "2019": data/alphaearth/alphaearth_2019.tif
+  output_dir: data/alphaearth/aligned/site_01
+
